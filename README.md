@@ -1,4 +1,4 @@
-# Mocha WebdriverIO WEB Test Boilerplate
+Mocha WebdriverIO WEB Testing Boilerplate
 ====================
 ATDD WEB tests with Mocha, WebdriverIO v6 with PageObject
 
@@ -24,5 +24,9 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 **Run Tests**
 
 ```npm test```
+
+**Allure Report**
+
+```npm run report```
 
 
