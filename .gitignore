@@ -1,4 +1,5 @@
 /report/*
 /node_modules/*
+/junit/*
 report.*
 .idea/*
