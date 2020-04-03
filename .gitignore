@@ -1,0 +1,4 @@
+/report/*
+/node_modules/*
+report.*
+.idea/*
