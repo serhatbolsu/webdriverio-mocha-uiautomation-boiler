@@ -15,7 +15,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-     working_directory: ~/project
+    working_directory: ~/project
 
       # environment:
     # JAVA_HOME:  /usr/lib/jvm/java-8-openjdk-amd64
