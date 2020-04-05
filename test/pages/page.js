@@ -1,9 +1,6 @@
-const utilities = require('../../support/utils/utilities');
-
 export default class Page {
   constructor() {
     this.title = 'my Page';
-    this.utilities = utilities;
   }
 
   open(path) {

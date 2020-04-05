@@ -213,6 +213,7 @@ exports.config = {
     before: function (capabilities, specs) {
         global.allure = allure;
         global.chai = chai;
+        global.utilities = utilities;
     },
     /**
      * Runs before a WebdriverIO command gets executed.

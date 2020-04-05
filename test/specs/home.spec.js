@@ -9,6 +9,6 @@ describe('Home Page Suite', function() {
     expect(homePage.pageModals[3].title).toEqual('Load Delay');
     expect(homePage.pageModals[3].content).toEqual(
         'Ensure that a test is capable of waiting for a page to load');
-    homePage.utilities.takeScreenshot('homepage');
+    utilities.takeScreenshot('homepage');
   });
 });
