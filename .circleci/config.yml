@@ -46,7 +46,7 @@ jobs:
             npm run test.sauce
 
       - store_test_results:
-          path: ~/report/junit
+          path: ~/report/junit/results.xml
 
       - store_artifacts:
-          path: ~/report/junit
+          path: ~/report/junit/results.xml

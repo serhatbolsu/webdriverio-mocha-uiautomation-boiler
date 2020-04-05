@@ -158,6 +158,9 @@ exports.config = {
       }],
       ['junit', {
         outputDir: 'report/junit',
+        outputFileFormat: function(options) { // optional
+          return `results.xml`
+        }
       }]
     ],
  
