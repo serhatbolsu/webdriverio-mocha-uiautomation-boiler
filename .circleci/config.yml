@@ -46,7 +46,7 @@ jobs:
             npm run test.sauce
 
       - store_test_results:
-          path: ~/report/junit
+          path: ~/repo/report/junit
 
       - store_artifacts:
-          path: ~/allure-report
+          path: ~/repo/allure-report
