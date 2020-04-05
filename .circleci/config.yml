@@ -45,13 +45,13 @@ jobs:
           command: |
             npm run test.sauce
 
-      - run:
-          name: Generate Allure Report
-          command: npm run report.ci
-          when: always
+#      - run:
+#          name: Generate Allure Report
+#          command: npm run report.ci
+#          when: always
 
       - store_test_results:
           path: ./report/junit
 
-      - store_artifacts:
-          path: allure-report/
+#      - store_artifacts:
+#          path: allure-report/
