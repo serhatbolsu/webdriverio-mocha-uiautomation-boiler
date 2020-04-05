@@ -7,6 +7,6 @@ describe('Ajax Page Suite', function() {
         .ajaxButton.click();
     expect(ajaxPage.ajaxContent).toHaveText(
         'Data loaded with AJAX get request.', { wait: 20000 });
-    ajaxPage.utilities.takeScreenshot('ajax_with_request_capture');
+    utilities.takeScreenshot('ajax_with_request_capture');
   });
 });
