@@ -156,9 +156,9 @@ exports.config = {
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
       }],
-        ['junit', {
-            outputDir: 'report/junit',
-        }]
+      ['junit', {
+        outputDir: 'report/junit',
+      }]
     ],
  
     //

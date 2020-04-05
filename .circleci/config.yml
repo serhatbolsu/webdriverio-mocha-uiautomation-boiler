@@ -9,8 +9,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:12.2.0
-      - image: circleci/openjdk:8-jdk-stretch
-      - image: selenium/standalone-chrome:latest
+#      - image: circleci/openjdk:8-jdk-stretch
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -46,15 +45,8 @@ jobs:
           command: |
             npm run test.sauce
 
-      # generate report !
-      - run:
-          name: "Allure Report Generate"
-          command: |
-            npm run report
-          when: always
-
       - store_test_results:
-          path: ./report/junit
+          path: ~/report/junit
 
       - store_artifacts:
-          path: ./allure-report
+          path: ~/allure-report
