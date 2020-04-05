@@ -44,7 +44,7 @@ jobs:
       - run:
           name: "Run tests"
           command: |
-            npm test
+            npm run test.sauce
 
       # generate report !
       - run:
@@ -54,7 +54,7 @@ jobs:
           when: always
 
       - store_test_results:
-          path: ./junit
+          path: ./report/junit
 
       - store_artifacts:
           path: ./allure-report
