@@ -157,7 +157,7 @@ exports.config = {
         disableWebdriverScreenshotsReporting: false,
       }],
       ['junit', {
-        outputDir: 'junit',
+        outputDir: 'report/junit',
         outputFileFormat: function(options) { // optional
           return `test-results.xml`
         }

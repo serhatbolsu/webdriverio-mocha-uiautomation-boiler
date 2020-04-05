@@ -7,7 +7,8 @@
     "test": "wdio wdio.conf.js",
     "test.sauce": "wdio wdio.saucelabs.conf.js",
     "lint": "eslint .",
-    "report": "allure serve report/allure-results"
+    "report": "allure serve report/allure-results",
+    "report.ci": "allure generate report/allure-results --clean -o allure-report"
   },
   "keywords": [
     "mocha",

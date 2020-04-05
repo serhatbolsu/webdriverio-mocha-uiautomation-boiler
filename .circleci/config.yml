@@ -15,7 +15,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    # working_directory: ~/repo
+     working_directory: ~/project
 
       # environment:
     # JAVA_HOME:  /usr/lib/jvm/java-8-openjdk-amd64
@@ -35,8 +35,6 @@ jobs:
           command: |
             npm install
 
-      - run: mkdir ~/junit
-
       - save_cache:
           paths:
             - node_modules
@@ -47,8 +45,13 @@ jobs:
           command: |
             npm run test.sauce
 
+      - run:
+          name: Generate Allure Report
+          command: npm run report.ci
+          when: always
+
       - store_test_results:
-          path: ~/junit
+          path: ./report/junit
 
       - store_artifacts:
-          path: ~/junit/test-results.xml
+          path: allure-report/
