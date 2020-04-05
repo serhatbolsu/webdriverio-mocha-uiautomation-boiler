@@ -35,6 +35,8 @@ jobs:
           command: |
             npm install
 
+      - run: mkdir ~/junit
+
       - save_cache:
           paths:
             - node_modules
@@ -46,7 +48,7 @@ jobs:
             npm run test.sauce
 
       - store_test_results:
-          path: ~/report/junit/results.xml
+          path: ~/junit
 
       - store_artifacts:
-          path: ~/report/junit/results.xml
+          path: ~/junit/test-results.xml
