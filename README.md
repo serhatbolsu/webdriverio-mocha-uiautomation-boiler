@@ -1,4 +1,4 @@
-Mocha WebdriverIO WEB Testing Boilerplate
+Mocha WebdriverIO WEB Testing Boilerplate [![CircleCI](https://circleci.com/gh/serhatbolsu/webdriverio-mocha-uiautomation-boiler.svg?style=svg)](https://circleci.com/gh/serhatbolsu/webdriverio-mocha-uiautomation-boiler)
 ====================
 ATDD WEB tests with Mocha, WebdriverIO v6 with PageObject
 
