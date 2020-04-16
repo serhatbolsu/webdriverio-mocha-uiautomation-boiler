@@ -5,9 +5,10 @@ describe('Text Input Spec', function() {
     textInputPage.open();
   });
 
-  it('Change button text', function() {
+  it('Change button text with chai', function() {
     console.log(textInputPage.getButtonText());
     textInputPage.updateButtonText('My Special Name');
     chai.expect(textInputPage.getButtonText()).to.be.eql('My Special Name');
   });
-})
+});
+

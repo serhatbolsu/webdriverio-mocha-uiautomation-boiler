@@ -5,15 +5,21 @@ module.exports = {
     },
     "extends": "google",
     "globals": {
+        "$": true,
+        "$$": true,
+        "browser": true,
+        "expect": true,
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
-        "mocha"
+        "mocha",
+        "babel"
     ],
     "rules": {
         "arrow-parents": [0, "as-needed"],
@@ -21,11 +27,6 @@ module.exports = {
         "brace-style": [0, "allman", { "allowSingleLine": true }],
         "max-len": ["error", { "code": 100 }],
         "object-curly-spacing": ["error", "always"],
+        "babel/semi": 1
     },
-    "globals": {
-        $: false,
-        $$: false,
-        browser: false,
-        expect: false
-    }
 };

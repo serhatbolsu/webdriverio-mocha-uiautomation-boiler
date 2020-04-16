@@ -3,7 +3,7 @@ import ModalComponent from './components/home_modal.component';
 
 class HomePage extends Page {
   get pageModals() {
-    return $$('#overview .col-sm').map(modal => new ModalComponent(modal));
+    return $$('#overview .col-sm').map((modal) => new ModalComponent(modal));
   }
 
   open() {
