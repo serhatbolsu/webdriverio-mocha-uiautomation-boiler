@@ -1,0 +1,3 @@
+/report/*
+/node_modules/*
+wdio.conf.js
