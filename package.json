@@ -8,7 +8,8 @@
     "test.sauce": "wdio wdio.saucelabs.conf.js",
     "lint": "eslint .",
     "report": "allure serve report/allure-results",
-    "report.ci": "allure generate report/allure-results --clean -o allure-report"
+    "report.ci": "allure generate report/allure-results --clean -o allure-report",
+    "report.teams": "TEST_FRAMEWORK=wdio PROJECT_NAME=\"WebdriverIO Boilerplate\" node ./support/utils/teamsReporter.js ../../report/json/testResults.json"
   },
   "keywords": [
     "mocha",
@@ -25,7 +26,8 @@
   "dependencies": {
     "@wdio/cli": "^6.0.13",
     "@wdio/sync": "^6.0.12",
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "superagent": "^5.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -46,7 +48,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-mocha": "^6.3.0",
-    "wdio-chromedriver-service": "^5.0.2"
+    "wdio-chromedriver-service": "^5.0.2",
+    "wdio-json-reporter": "^2.0.0"
   },
   "babel": {
     "presets": [

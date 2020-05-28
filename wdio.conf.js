@@ -55,7 +55,7 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -134,7 +134,7 @@ exports.config = {
         //     },
         // }]
     ],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -164,9 +164,12 @@ exports.config = {
         outputFileFormat: function(options) { // optional
           return `test-${options.cid}-results.xml`
         }
-      }]
+      }],
+        ['json',{
+            outputDir: './report/json'
+        }]
     ],
- 
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -309,8 +312,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function(exitCode, config, capabilities, results) {
+        const mergeResults = require('wdio-json-reporter/mergeResults');
+        mergeResults('./report/json', 'wdio-*', 'testResults.json')
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session

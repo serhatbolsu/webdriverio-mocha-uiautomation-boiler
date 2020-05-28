@@ -29,4 +29,11 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 
 ```npm run report```
 
+**Microsoft Teams Mini Report**
+
+```
+export HOOK_URL=<microsoft_teams_webhook_url>
+npm run report.teams
+```
+
 
