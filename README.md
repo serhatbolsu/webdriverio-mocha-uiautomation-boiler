@@ -26,6 +26,7 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 ```npm test```
 
 **Allure Report**
+(you must have installed [allure command line](https://docs.qameta.io/allure/#_get_started))
 
 ```npm run report```
 
