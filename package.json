@@ -26,6 +26,7 @@
   "dependencies": {
     "@wdio/cli": "^6.0.13",
     "@wdio/sync": "^6.0.12",
+    "chai": "^4.2.0",
     "superagent": "^5.2.2"
   },
   "devDependencies": {

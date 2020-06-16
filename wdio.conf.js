@@ -1,4 +1,5 @@
 const utilities= require("./support/utils/Utilities");
+const chai = require('chai');
 const allure = require('@wdio/allure-reporter').default;
 
 // Max time for single test case execution
@@ -62,7 +63,7 @@ exports.config = {
         //
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['--disable-infobars'],
+            args: ['--disable-infobars', '--window-size=1920,1440'],
         }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -100,7 +101,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:80/',
+    baseUrl: 'http://uitestingplayground.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: elementTimeout,
@@ -220,6 +221,7 @@ exports.config = {
      */
     before: function (capabilities, specs) {
         global.allure = allure;
+        global.chai = chai;
         global.utilities = utilities;
     },
     /**
