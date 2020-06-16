@@ -3,6 +3,7 @@ export default class ModalComponent {
     this.element = element;
   }
 
+  get url() {return this.element.$('a');}
   get title() {return this.element.$('h3').getText();}
   get content() {return this.element.$('p').getText();}
 }

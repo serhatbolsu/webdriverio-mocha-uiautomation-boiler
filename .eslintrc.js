@@ -22,6 +22,7 @@ module.exports = {
         "babel"
     ],
     "rules": {
+        "quotes": "off",
         "arrow-parents": [0, "as-needed"],
         "require-jsdoc": "off",
         "brace-style": [0, "allman", { "allowSingleLine": true }],
