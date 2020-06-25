@@ -6,6 +6,7 @@ class Utilities {
   }
 
   static takeScreenshot(name, failure=false) {
+    if (!name) name = moment().format('YYYY-MM-DDTH:mm:ss');
     const path = './report/screenshot/';
     if (!fs.existsSync(path)) {
       fs.mkdirSync(path, { recursive: true });
