@@ -4,6 +4,7 @@
   "description": "Boilerplate project to run WEB Test Automation WebdriverIO v6 with Mocha",
   "main": "./node_modules/.bin/wdio",
   "scripts": {
+    "clean": "shx rm -rf ./report",
     "test": "wdio wdio.conf.js",
     "test.sauce": "wdio wdio.saucelabs.conf.js",
     "lint": "eslint .",
@@ -27,6 +28,7 @@
     "@wdio/cli": "^6.0.13",
     "@wdio/sync": "^6.0.12",
     "chai": "^4.2.0",
+    "shx": "^0.3.2",
     "superagent": "^5.2.2"
   },
   "devDependencies": {
