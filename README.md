@@ -20,6 +20,9 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 
 **Install**
 
+(optional) Create your own configurations.
+- Rename the `sample.env` and rename to `.env` and change required variables
+
 ```npm install```
 
 **Run Tests**
@@ -34,7 +37,11 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 **Microsoft Teams Mini Report**
 
 ```
+# For Unix
 export HOOK_URL=<microsoft_teams_webhook_url>
+# For Windows Powershell
+$env:HOOK_URL = '<microsoft_teams_webhook_url>'
+
 npm run report.teams
 ```
 

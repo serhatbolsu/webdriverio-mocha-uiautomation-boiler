@@ -1,17 +1,15 @@
 const request = require('superagent');
 
 function main() {
-  if (process.env.TEST_FRAMEWORK === undefined) {
-    throw new Error('TEST_FRAMEWORK should be defined either as "jest" or "wdio"');
-  } else if (process.env.HOOK_URL === undefined) {
+  if (process.env.HOOK_URL === undefined) {
     throw new Error('HOOK_URL should be defined as Microsoft teams channel hook url');
   }
   const file = process.argv[2];
   if (!file) throw new Error('File path is not given');
 
-  const platform = process.env.TEST_FRAMEWORK;
+  const platform = process.env.TEST_FRAMEWORK || 'wdio';
   const hookUrl = process.env.HOOK_URL;
-  const project = process.env.PROJECT_NAME;
+  const project = process.env.PROJECT_NAME || "WebdriverIO Boilerplate";
   let environment = process.env.PROJECT_ENVIRONMENT;
   let type = process.env.PROJECT_TEST_TYPE;
   const buildUrl = process.env.BUILD_URL;

@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "report": "allure serve report/allure-results",
     "report.ci": "allure generate report/allure-results --clean -o allure-report",
-    "report.teams": "TEST_FRAMEWORK=wdio PROJECT_NAME=\"WebdriverIO Boilerplate\" node ./support/utils/teamsReporter.js ../../report/json/testResults.json"
+    "report.teams": "node ./support/utils/teamsReporter.js ../../report/json/testResults.json"
   },
   "keywords": [
     "mocha",
@@ -28,6 +28,7 @@
     "@wdio/cli": "^6.0.13",
     "@wdio/sync": "^6.0.12",
     "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
     "shx": "^0.3.2",
     "superagent": "^5.2.2"
   },
