@@ -13,7 +13,6 @@ class AjaxPage extends Page {
   getContent() {
     this.ajaxContent.waitForExist({ timeout: 20000 });
     return this.ajaxContent.getText();
-    return this;
   }
 }
 
