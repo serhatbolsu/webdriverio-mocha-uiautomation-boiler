@@ -1,8 +1,8 @@
 import Page from './page';
 
 class AjaxPage extends Page {
-  get ajaxButton() {return $('#ajaxButton')}
-  get ajaxContent() {return $('#content > p')}
+  get ajaxButton() { return $('#ajaxButton') }
+  get ajaxContent() { return $('#content > p') }
 
   open() {
     super.open('ajax');

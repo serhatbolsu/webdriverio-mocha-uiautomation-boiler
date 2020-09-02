@@ -29,6 +29,7 @@ module.exports = {
         "max-len": ["error", { "code": 120 }],
         "object-curly-spacing": ["error", "always"],
         "linebreak-style": ["error", "unix"],
-        "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
+        "block-spacing": ["warn", "always"],
     },
 };
