@@ -16,7 +16,7 @@ Sample and ready to use boilerplate project for e2e / ui test automation with us
 
 ## How to Start
 
-**Download a release or clone the project**
+**Download or clone the project**
 
 **Install**
 

@@ -7,6 +7,7 @@ function main() {
   const file = process.argv[2];
   if (!file) throw new Error('File path is not given');
 
+  // either 'jest' or 'wdio'
   const platform = process.env.TEST_FRAMEWORK || 'wdio';
   const hookUrl = process.env.HOOK_URL;
   const project = process.env.PROJECT_NAME || "WebdriverIO Boilerplate";
