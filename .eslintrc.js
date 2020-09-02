@@ -19,7 +19,7 @@ module.exports = {
     },
     "plugins": [
         "mocha",
-        "babel"
+        "@babel"
     ],
     "rules": {
         "quotes": "off",
@@ -28,7 +28,7 @@ module.exports = {
         "brace-style": [0, "allman", { "allowSingleLine": true }],
         "max-len": ["error", { "code": 120 }],
         "object-curly-spacing": ["error", "always"],
-        "babel/semi": 1,
-        "linebreak-style": ["error", "unix"]
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
     },
 };

@@ -1,8 +1,8 @@
 import Page from './page';
 
 class TextInput extends Page {
-  get nameField() {return $('#newButtonName');}
-  get button() {return $('#updatingButton');}
+  get nameField() {return $('#newButtonName')}
+  get button() {return $('#updatingButton')}
 
   open() {
     super.open('textinput');
